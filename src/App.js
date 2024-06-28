@@ -1,16 +1,21 @@
-import React from 'react'
-import Admin from './Admin'
-import { Routes, Route , useNavigate} from "react-router-dom"
-import Home from './Home'
+import "./App.css";
+import SearchTodos from './ToDoList'
+import SearchUsers from "./UsersList";
 
-const App = () => {
-    const navigate = useNavigate()
+function App() {
   return (
-    <Routes>
-        <Route index element={<Home />} />
-        <Route path="Admin" element={<Admin />} />
-    </Routes>
-  )
+    <div className="App">
+      <h2>Higher Order Component</h2>
+      <div className="section">
+        <div>
+          <SearchUsers />
+        </div>
+        <div>
+          <SearchTodos />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
